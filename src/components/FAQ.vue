@@ -1,16 +1,16 @@
 <template>
 	<main>
-		<h1 class="text-center pb-6 text-3xl md:text-4xl lg:text-5xl font-semibold text-indigo-500">FAQ's</h1>
-			<p class="text-gray-600 text-center lg:px-24">Rasa penasaranmu tentang event ini akan kami coba bantu cari solusinya, jika belum puas silahkan hubungi narahubung kami</p>
-			<section class="w-full md:w-8/12 lg:w-6/12 md:mx-auto mt-10">
-				<template v-for="(list, x) in FAQ" :key="x">
-					<FAQlist :list="list" />
+		<section class="mt-12">
+			<p class="text-indigo-500 font-semibold text-xl lg:text-2xl md:text-center mb-5">Planes</p>
+			<div class="md:flex justify-evenly gap-6">
+				<template v-for="(speaker, x) in speakers" :key="x">
+					<CardProfile :profile="speaker" />
 				</template>
-			</section>
+			</div>
+		</section>
 	</main>
 </template>
 
 <script setup>
-	import FAQlist from '@/components/FAQlist.vue'
-	import FAQ from '@/FAQ.js'
+	import speakers from '@/speakers.js'
 </script>

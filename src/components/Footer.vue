@@ -2,10 +2,10 @@
 	<footer class="text-gray-100">
 		<section class="w-full flex flex-col gap-10 md:flex-row md:justify-between lg:justify-center">
 			<section class="md:w-5/12">
-				<strong>Kampus Politeknik Hasnur</strong>
-				<p>Ray V, JL.Brigjen H. Hasan Basri, Handil Bakti, Kec. Alalak, Kabupaten Barito Kuala, Kalimantan Selatan 70582.</p>
+				<strong>Uplink</strong>
+				<p>Piritu Edo. Anzoátegui</p>
 			</section>
-			<section>
+			<!-- <section>
 				<strong>HIMA Teknik Informatika Politeknik Hasnur</strong>
 				<p class="mb-4">Kabinet Ruhuy Rahayu</p>
 				<ul>
@@ -22,10 +22,10 @@
 						hima_ti.polihasnur
 					</li>
 				</ul>
-			</section>
+			</section> -->
 		</section>
 		<section class="w-full text-center mt-16">
-			Divisi Minat Bakat - HIMA TI Polihasnur &copy; 2022
+			Jesus Oroño &copy; 2024
 		</section>
 	</footer>
 </template>

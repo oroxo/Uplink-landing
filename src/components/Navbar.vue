@@ -2,7 +2,7 @@
 	<main class="navbar">
 		<section class="navbar-brand">
 			<img src="/logo.png" width="45" />
-			<h1 class="text-gray-50 text-xl font-semibold lg:text-3xl">HIMA TI POLIHASNUR</h1>
+			<h1 class="text-gray-50 text-xl font-semibold lg:text-3xl">UP-LINK</h1>
 			<button @click="showMenu = true" class="active:scale-95 duration-300 md:hidden" type="button">
 				<i class="fa fa-bars text-gray-50 text-2xl"></i>
 			</button>
@@ -23,7 +23,7 @@
 
 <style scoped>
 	.navbar {
-		@apply z-20 md:flex md:items-center md:justify-between md:px-6 md:py-8 lg:px-10 w-full bg-gradient-to-r from-sky-500 to-indigo-600 fixed top-0 left-0 right-0 px-5 lg:py-8 py-3;
+		@apply z-20 md:flex md:items-center md:justify-between md:px-6 md:py-8 lg:px-10 w-full bg-gradient-to-r from-sky-500 to-sky-200 fixed top-0 left-0 right-0 px-5 lg:py-8 py-3;
 	}
 
 	.navbar-brand {
@@ -51,29 +51,29 @@
 	
 	const menus = [
 		{
-			name: 'Beranda',
+			name: 'Home',
 			to: '#'
 		},
 		{
-			name: 'Tentang',
-			to: '#about'
-		},
-		{
-			name: 'Kegiatan',
+			name: 'Pagos',
 			to: '#event'
 		},
 		{
-			name: 'FAQ',
+			name: 'Planes',
 			to: '#FAQ'
 		},
 		{
-			name: 'Narahubung',
-			to: '#contact'
+			name: 'Nosotros',
+			to: '#about'
 		},
-		{
-			name: 'Pengumuman',
-			to: '#announcement'
-		}
+		// {
+		// 	name: 'Narahubung',
+		// 	to: '#contact'
+		// },
+		// {
+		// 	name: 'Pengumuman',
+		// 	to: '#announcement'
+		// }
 	]
 	
 </script>
