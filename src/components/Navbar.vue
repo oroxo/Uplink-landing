@@ -56,11 +56,11 @@
 		},
 		{
 			name: 'Pagos',
-			to: '#event'
+			to: '#pagos'
 		},
 		{
 			name: 'Planes',
-			to: '#FAQ'
+			to: '#planes'
 		},
 		{
 			name: 'Nosotros',
