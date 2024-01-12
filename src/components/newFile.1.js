@@ -1,0 +1,3 @@
+{
+initTE({ Carousel });
+}

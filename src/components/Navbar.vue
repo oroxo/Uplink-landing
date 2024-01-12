@@ -2,7 +2,7 @@
 	<main class="navbar">
 		<section class="navbar-brand">
 			<img src="/logo.png" width="45" />
-			<h1 class="text-gray-50 text-xl font-semibold lg:text-3xl">UP-LINK</h1>
+			<h1 class="text-gray-50 text-xl font-semibold lg:text-3xl">UP LINK</h1>
 			<button @click="showMenu = true" class="active:scale-95 duration-300 md:hidden" type="button">
 				<i class="fa fa-bars text-gray-50 text-2xl"></i>
 			</button>
@@ -23,7 +23,7 @@
 
 <style scoped>
 	.navbar {
-		@apply z-20 md:flex md:items-center md:justify-between md:px-6 md:py-8 lg:px-10 w-full bg-gradient-to-r from-sky-500 to-sky-200 fixed top-0 left-0 right-0 px-5 lg:py-8 py-3;
+		@apply z-20 md:flex md:items-center md:justify-between md:px-6 md:py-8 lg:px-10 w-full bg-gradient-to-t from-transparent to-[#1521c5] fixed top-0 left-0 right-0 px-5 lg:py-8 py-3;
 	}
 
 	.navbar-brand {
@@ -63,7 +63,7 @@
 			to: '#planes'
 		},
 		{
-			name: 'Nosotros',
+			name: 'Conocenos',
 			to: '#about'
 		},
 		// {

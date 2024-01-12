@@ -2,7 +2,7 @@
 	<footer class="text-gray-100">
 		<section class="w-full flex flex-col gap-10 md:flex-row md:justify-between lg:justify-center">
 			<section class="md:w-5/12">
-				<strong>Uplink</strong>
+				<strong>UP LINK DE VENEZUELA, C.A</strong>
 				<p>Piritu Edo. Anzoátegui</p>
 			</section>
 			<!-- <section>
@@ -25,7 +25,8 @@
 			</section> -->
 		</section>
 		<section class="w-full text-center mt-16">
-			Jesus Oroño &copy; 2024
+			UP LINK DE VENEZUELA, C.A &copy; 2024
+			J-29355952-9
 		</section>
 	</footer>
 </template>

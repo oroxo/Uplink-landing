@@ -5,9 +5,9 @@
 		<img src="/vector.png" class="md:w-5/12 block mb-8 lg:mb-0" />
 		
 		<!-- Caption -->
-		<section class="md:w-6/12">
+		<section class="md:w-5/11">
 			<h1 id="heading" class="lg:text-5xl lg:leading-snug text-3xl text-gray-50 font-semibold">
-				Up-Link de Venezuela 
+				UP LINK DE VENEZUELA, C.A
 			</h1>
 			<p class="lg:text-2xl text-gray-100 font-medium mt-4">A La Velocidad De La Luz!!</p>
 			<!-- <p class="lg:text-2xl text-gray-100 font-medium">

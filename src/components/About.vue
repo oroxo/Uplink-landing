@@ -1,6 +1,6 @@
 <template>
 	<main class="py-10">
-		<h1 class="text-center pb-6 text-3xl md:text-4xl lg:text-5xl font-semibold text-indigo-500">Nosotros</h1>
+		<h1 class="text-center pb-6 text-3xl md:text-4xl lg:text-5xl font-semibold text-[#1521f7]">Nosotros</h1>
 		<p class="text-gray-600 text-center lg:px-24">UP-LINK de Venezuela</p>
 		<section class="mt-10 md:flex md:gap-8 md:items-start xl:items-start">
 			<img class="md:mx-auto mb-5 md:w-3/12 lg:w-2/12" src="/about.png" width="150" />

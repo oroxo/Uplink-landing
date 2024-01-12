@@ -1,9 +1,10 @@
 <template>
 	<Navbar />
 	<main class="w-full scroll-smooth">
-		
-		<section class="lg:min-h-screen section bg-gradient-to-r from-sky-500 to-sky-200">
-			<Headline />
+		<!-- #1521c5 -->
+		<!-- <section class="lg:min-h-screen section bg-gradient-to-r from-sky-500 to-sky-200"> -->
+		<section class="lg:h-screen bg-sky-1000">
+			<Carousel />
 		</section>
 		
 		<!-- <section class="section bg-gray-100 flex flex-wrap justify-center md:justify-between gap-3">
@@ -51,7 +52,8 @@
 <script setup>
 
 import Navbar from '@/components/Navbar.vue'
-import Headline from '@/components/Headline.vue'
+// import Headline from '@/components/Headline.vue'
+import Carousel from '@/components/Carousel.vue'
 import About from '@/components/About.vue'
 import Event from '@/components/Event.vue'
 import FAQ from '@/components/FAQ.vue'
