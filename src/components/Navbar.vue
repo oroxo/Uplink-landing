@@ -1,5 +1,5 @@
 <template>
-	<main class="navbar">
+	<main class="transition-colors duration-500" :class="showColoredBackground? 'navbar' : 'navbar-transparent'">
 		<section class="navbar-brand">
 			<img src="/logo.png" width="45" />
 			<h1 class="text-gray-50 text-xl font-semibold lg:text-3xl">UP LINK</h1>
@@ -23,7 +23,11 @@
 
 <style scoped>
 	.navbar {
-		@apply z-20 md:flex md:items-center md:justify-between md:px-6 md:py-8 lg:px-10 w-full bg-gradient-to-t from-transparent to-[#1521c5] fixed top-0 left-0 right-0 px-5 lg:py-8 py-3;
+		@apply z-20 md:flex md:items-center md:justify-between md:px-6 md:py-8 lg:px-10 w-full bg-[#1521c5] fixed top-0 left-0 right-0 px-5 lg:py-8 py-3;
+	}
+
+	.navbar-transparent {
+		@apply z-20 md:flex md:items-center md:justify-between md:px-6 md:py-8 lg:px-10 w-full bg-transparent fixed top-0 left-0 right-0 px-5 lg:py-8 py-3;
 	}
 
 	.navbar-brand {
@@ -46,6 +50,17 @@
 	const menuActive = ref('Beranda')
 	const showMenu = ref(false)
 	const viewport = ref(window.innerWidth) //Get current width of browser
+	let showColoredBackground = ref(false)
+
+	document.addEventListener('scroll', function() {
+		let bodyTopPosition = document.body.getBoundingClientRect().top
+		let viewportHeight = (window.innerHeight * 0.9)*-1
+		if (bodyTopPosition < viewportHeight) {
+			showColoredBackground.value = true
+		}else{
+			showColoredBackground.value = false
+		}
+	})
 
 	if ( viewport.value >= 768 ) showMenu.value = true //If device tablet or more wider shoow menu
 	

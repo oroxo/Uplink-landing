@@ -43,31 +43,20 @@
       </video>
       <div
         class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
-        style="background-color: rgba(0, 0, 0, 0.6)">
-        <div class="z-10 mt-20 md:py-10 lg:pt-28 md:flex md:flex-row-reverse md:justify-between md:items-center gap-3">
-            <img src="/vector.png" class="md:w-4/12 block mb-8 lg:mb-0 invisible" />
-            <section class="md:w-5/11">
-			<h1 id="heading" class="lg:text-5xl lg:leading-snug text-3xl text-gray-50 font-semibold">
-				UP LINK DE VENEZUELA, C.A
-			</h1>
-			<p class="lg:text-2xl text-gray-100 font-medium mt-4">A La Velocidad De La Luz!!</p>
-			<!-- <p class="lg:text-2xl text-gray-100 font-medium">
-				Lead the better future with Himpunan Mahasiswa Teknik Informatika Politeknik Hasnur
-			</p> -->
-			
-			<!-- Call to action -->
-			<!-- <a href="https://dl.dropbox.com/s/n1u3ddhnsnsds1m/rundown-it-gathering-2022.pdf?dl=2" class="duration-300 cursor-pointer active:ring-2 ring-indigo-300 hover:scale-90 text-gray-50 w-8/12 mt-4 lg:mt-8 justify-center flex items-center gap-2 lg:gap-3 bg-gradient-to-r from-indigo-500 to-indigo-700 py-3 px-3 lg:py-4 rounded-lg block">
-				<i class="fa fa-download lg:text-xl"></i>
-				<span class="lg:text-xl">Unduh rundown PDF</span>
-			</a> -->
-			
-			<div class="mt-10 md:mt-16 text-gray-100 flex items-center gap-2">
+        style="background-color: rgba(0, 0, 0, 0.3)">
+        <div class="flex h-full items-center justify-right ml-40">
+          <div class="px-md-0 px-14 text-right text-white">
+            <h1 class="mb-4 text-3xl font-semibold">
+                UP LINK DE VENEZUELA, C.A
+            </h1>
+            <p class="lg:text-2xl text-gray-100 font-medium mt-4">A La Velocidad De La Luz!!</p>
+            <div class="text-gray-100 items-center gap-2">
 				<a href="https://instagram.com/uplink_oriente?utm_medium=copy_link" target="_blank">
 					<i class="fab fa-instagram text-2xl text-pink-600"></i>
 						uplink_oriente
 				</a>
 			</div>
-		</section>
+          </div>
         </div>
       </div>
     </div>
@@ -100,7 +89,7 @@
       <video class="w-full" playsinline autoplay muted loop>
         <source
           class="embed-responsive-21by9"
-          src="https://oroxo.github.io/Uplink-landing/videos/Playa.m4v"
+          src="https://oroxo.github.io/Uplink-landing/videos/LightSpeed.mp4"
           type="video/mp4" />
       </video>
       <div
