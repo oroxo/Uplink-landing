@@ -58,8 +58,11 @@
 
 	document.addEventListener('scroll', function() {
 		let bodyTopPosition = document.body.getBoundingClientRect().top
-		let viewportHeight = (window.innerHeight * 0.9)*-1
-		if (bodyTopPosition < viewportHeight) {
+		let viewportH = (window.innerHeight * 0.9)*-1
+		let viewportW = ref(window.innerWidth) //Get current width of browser
+
+		// console.log("bodyTopPosition", bodyTopPosition, "viewport", viewportW.value, "viewport percentage", viewportW.value * 0.56)
+		if (bodyTopPosition < (viewportW.value * 0.56)*-1) {
 			showColoredBackground.value = true
 		}else{
 			showColoredBackground.value = false
@@ -70,20 +73,16 @@
 	
 	const menus = [
 		{
-			name: 'Home',
-			to: '#'
+			name: 'Inicio',
+			to: '/#'
 		},
-		{
-			name: 'Pagos',
-			to: '#pagos'
-		},
-		{
-			name: 'Planes',
-			to: '#planes'
-		},
+		// {
+		// 	name: 'Pagos',
+		// 	to: '#pagos'
+		// },
 		{
 			name: 'Quienes Somos',
-			to: '#about'
+			to: '/#about'
 		},
 		// {
 		// 	name: 'Narahubung',
