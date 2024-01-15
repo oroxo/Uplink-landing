@@ -3,7 +3,23 @@
 		<h1 class="text-center pb-6 text-3xl md:text-4xl lg:text-5xl font-semibold text-[#1521f7]">Quienes Somos</h1>
 		<p class="text-gray-600 text-center lg:px-24">UP LINK DE VENEZUELA, C.A</p>
 		<section class="mt-10 md:flex md:gap-8 md:items-start xl:items-start">
-			<img class="md:mx-auto mb-5 md:w-3/12 lg:w-2/12" src="/about.png" width="150" />
+			<div class="md:mx-auto mb-5 md:w-4/12 lg:w-3/12">
+				<div class="-m-1 flex flex-wrap md:-m-2">
+					<div class="flex w-full flex-wrap">
+						<div class="w-full p-1 md:p-2">
+							<img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center"
+								src="/fly/fly4.jpeg" />
+						</div>
+					</div>
+					<div class="flex w-full flex-wrap">
+						<div class="w-full p-1 md:p-2">
+							<img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center"
+								src="/fibra/fibra6.jpeg" />
+						</div>
+					</div>
+				</div>
+				<!-- <img src="" width="150" /> -->
+			</div>
 			<p class="xl:px-6 lg:text-lg text-gray-600 xl:w-9/12 leading-thight">
 				Somos una empresa en el área de telecomunicaciones que se especializa en ofrecer servicios de
 				transmisión satelital en toda Venezuela y en el exterior, fundada en el año 2006, desarrollándose como
@@ -14,7 +30,8 @@
 				empresa avanza en la expansión mediante la prestación de servicio de Internet vía Fibra Óptica con
 				tecnología GPON desarrollada especialmente para brindar una conexión estable y veloz a los comercios
 				u hogares del país.
-				Desde hace 2 años, <span class="text-indigo-700 font-medium">UP LINK DE VENEZUELA, C.A</span>, incursionó en la Zona Oriental del país
+				Desde hace 2 años, <span class="text-indigo-700 font-medium">UP LINK DE VENEZUELA, C.A</span>, incursionó en
+				la Zona Oriental del país
 				específicamente en la parte Norte del estado Anzoátegui, contando con los mejores equipos y así
 				satisfacer las necesidades de conexión, comunicación y acceso a Internet, así nos consolidamos como la
 				más efectiva alternativa del mercado actual.
@@ -25,3 +42,6 @@
 		</section>
 	</main>
 </template>
+
+<script>
+</script>
