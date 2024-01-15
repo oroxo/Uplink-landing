@@ -1,5 +1,6 @@
 <template>
 	<Navbar />
+	<PB />
 	<main class="w-full scroll-smooth">
 		<!-- #1521c5 -->
 		<!-- <section class="lg:min-h-screen section bg-gradient-to-r from-sky-500 to-sky-200"> -->
@@ -21,15 +22,15 @@
 			</template>
 		</section> -->
 		
-		<section id="pagos" class="section bg-gray-50">
+		<!-- <section id="pagos" class="section bg-gray-50">
 			<Event />
-		</section>
+		</section> -->
 		
 		<!-- <section id="planes" class="section bg-gray-100">
 			<FAQ />
 		</section>
 	-->
-	<section id="about" class="section bg-gray-100">
+	<section id="about" class="section bg-gray-100 mt-12">
 		<About />
 	</section>
 	
@@ -60,6 +61,7 @@ import FAQ from '@/components/FAQ.vue'
 import Contact from '@/components/Contact.vue'
 import Announcement from '@/components/Announcement.vue'
 import Footer from '@/components/Footer.vue'
+import PB from '@/components/PaymentButton.vue'
 
 const highlights = [
 {
