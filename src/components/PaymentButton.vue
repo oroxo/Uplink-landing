@@ -1,15 +1,21 @@
 <template>
 	<main class="transition-colors duration-500 navbar-transparent" :class="showColoredBackground? 'navbar-gradient' : 'md:navbar-transparent'">
 		<section>
-			<div class="fixed">
-				<a href="" class="button ">
+			<div class="fixed" v-if="$route.path != '/pagos'">
+				<router-link
+				to="/pagos"
+				custom
+				v-slot="{ navigate }"
+				>
+				<a @click="navigate" class="button ">
 					<div class="buttonDiv bg-b-blue">
 						Pagar
 					</div>
 				</a>
-			</div>
-		</section>
-	</main>
+			</router-link>
+		</div>
+	</section>
+</main>
 </template>
 
 <style scoped>
@@ -78,14 +84,19 @@
 
 </style>
 
-<script setup>
-
+<script>
 import { ref } from 'vue'
 
-const menuActive = ref('Beranda')
-const showMenu = ref(false)
-const viewport = ref(window.innerWidth) //Get current width of browser
-if ( viewport.value >= 768 ) showMenu.value = true //If device tablet or more wider shoow menu
+export default{
+	setup () {
+		const menuActive = ref('Beranda')
+		const showMenu = ref(false)
+		const viewport = ref(window.innerWidth) //Get current width of browser
+		if ( viewport.value >= 768 ) showMenu.value = true //If device tablet or more wider shoow menu
+	}
+
+
+}
+
 
 </script>
-	
