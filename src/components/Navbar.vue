@@ -1,5 +1,5 @@
 <template>
-	<main class="transition-colors duration-500" :class="showColoredBackground? 'navbar' : 'navbar-transparent'">
+	<main class="transition-colors duration-500 navbar-transparent" :class="showColoredBackground? 'navbar-gradient' : 'md:navbar-transparent'">
 		<section class="navbar-brand">
 			<img src="/logo.png" width="45" />
 			<h1 class="text-gray-50 text-xl font-semibold lg:text-3xl">UP LINK</h1>
@@ -28,6 +28,10 @@
 
 	.navbar-transparent {
 		@apply z-20 md:flex md:items-center md:justify-between md:px-6 md:py-8 lg:px-10 w-full bg-transparent fixed top-0 left-0 right-0 px-5 lg:py-8 py-3;
+	}
+
+	.navbar-gradient {
+		@apply z-20 md:flex md:items-center md:justify-between md:px-6 md:py-8 lg:px-10 w-full bg-gradient-to-b from-[#1521c5] to-transparent backdrop-blur-sm fixed top-0 left-0 right-0 px-5 lg:py-8 py-3;
 	}
 
 	.navbar-brand {
@@ -78,7 +82,7 @@
 			to: '#planes'
 		},
 		{
-			name: 'Conocenos',
+			name: 'Quienes Somos',
 			to: '#about'
 		},
 		// {
