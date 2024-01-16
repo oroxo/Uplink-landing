@@ -1,7 +1,7 @@
 <template>
     <section class="lg:h-screen bg-sky-1000">
         <div class="body">
-            <img class="stars" src="/stars.png" data-value="5">
+            <img class="stars" src="/stars-s.png" data-value="5">
             <div class="container1">
                 <div class="relative mb-4 flex w-60 flex-wrap items-stretch">
                     <div class="w-1/6">
@@ -48,7 +48,7 @@
 .body {
     width: 100vw;
     height:100vh;
-    background: url(sky.png) no-repeat;
+    background: url(/sky-s.png) no-repeat;
     background-size: cover;
     position: relative;
     display: flex;

@@ -18,6 +18,41 @@ const router = createRouter({
       // ]
 
     },
+    {
+      path: '/about', name: 'nosotros', component: () => import('../Pages/About.vue'),
+      // children: [
+      //   { path: '/', name: 'web.home', component: () => import('../views/Home.vue') }
+      // ]
+
+    },
+    {
+      path: '/plans', name: 'planes', component: () => import('../Pages/Plans.vue'),
+      // children: [
+      //   { path: '/', name: 'web.home', component: () => import('../views/Home.vue') }
+      // ]
+
+    },
+    {
+      path: '/tv', name: 'tv', component: () => import('../Pages/tv.vue'),
+      // children: [
+      //   { path: '/', name: 'web.home', component: () => import('../views/Home.vue') }
+      // ]
+
+    },
+    {
+      path: '/contact', name: 'contact', component: () => import('../Pages/Contact.vue'),
+      // children: [
+      //   { path: '/', name: 'web.home', component: () => import('../views/Home.vue') }
+      // ]
+
+    },
+    {
+      path: '/speedtest', name: 'speedtest', component: () => import('../Pages/speedtest.vue'),
+      // children: [
+      //   { path: '/', name: 'web.home', component: () => import('../views/Home.vue') }
+      // ]
+
+    },
 
   ]
 })

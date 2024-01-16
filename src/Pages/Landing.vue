@@ -28,10 +28,10 @@
 			<FAQ />
 		</section>
 	-->
-	<section id="about" class="section bg-gray-100 mt-12">
+	<!-- <section id="about" class="section bg-gray-100 mt-12">
 		<About />
 	</section>
-	
+	 -->
 	<!-- <section id="contact" class="section bg-gray-50">
 		<Contact />
 	</section>

@@ -44,12 +44,12 @@
       <div
         class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
         style="background-color: rgba(0, 0, 0, 0.3)">
-        <div class="flex h-full items-center justify-right ml-40">
-          <div class="px-md-0 px-14 text-right text-white">
+        <div class="flex h-full items-center justify-center">
+          <div class="px-md-0 px-14 text-center text-white">
             <h1 class="mb-4 text-3xl font-semibold">
                 UP LINK DE VENEZUELA, C.A
             </h1>
-            <p class="lg:text-2xl text-gray-100 font-medium mt-4">A La Velocidad De La Luz!!</p>
+            <p class="lg:text-2xl text-gray-100 font-medium mt-4">¡¡A la Velocidad de la Luz!!</p>
             <div class="text-gray-100 items-center gap-2">
 				<a href="https://instagram.com/uplink_oriente?utm_medium=copy_link" target="_blank">
 					<i class="fab fa-instagram text-2xl text-pink-600"></i>
@@ -76,7 +76,7 @@
         <div class="flex h-full items-center justify-center">
           <div class="px-md-0 px-14 text-center text-white">
             <h2 class="mb-4 text-3xl font-semibold">
-              Mas cerca de ti!
+              ¡Más cerca de ti!
             </h2>
           </div>
         </div>
@@ -104,7 +104,7 @@
         <div class="flex h-full items-center justify-center">
           <div class="px-md-0 px-14 text-center text-white">
             <h2 class="mb-4 text-3xl font-semibold">
-              Mas Rapido!
+              ¡Más Rapido!
             </h2>
             <!-- <a
               type="button"

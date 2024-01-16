@@ -21,23 +21,13 @@
 				<!-- <img src="" width="150" /> -->
 			</div>
 			<p class="xl:px-6 lg:text-lg text-gray-600 xl:w-9/12 leading-thight">
-				Somos una empresa en el área de telecomunicaciones que se especializa en ofrecer servicios de
-				transmisión satelital en toda Venezuela y en el exterior, fundada en el año 2006, desarrollándose como
-				uno de los mejores proyectos de telecomunicaciones en el país de forma eficiente, respondiendo a las
-				necesidades de los clientes a nivel nacional.
-				Ahora bien, como estrategia de crecimiento en las telecomunicaciones y con más de 17 años de
-				trayectoria, buscando siempre la innovación y así atender las necesidades cambiantes del mercado, la
-				empresa avanza en la expansión mediante la prestación de servicio de Internet vía Fibra Óptica con
-				tecnología GPON desarrollada especialmente para brindar una conexión estable y veloz a los comercios
-				u hogares del país.
-				Desde hace 2 años, <span class="text-indigo-700 font-medium">UP LINK DE VENEZUELA, C.A</span>, incursionó en
-				la Zona Oriental del país
-				específicamente en la parte Norte del estado Anzoátegui, contando con los mejores equipos y así
-				satisfacer las necesidades de conexión, comunicación y acceso a Internet, así nos consolidamos como la
-				más efectiva alternativa del mercado actual.
-				Además, contamos con un equipo de talento humano altamente calificado, con una infraestructura y
-				tecnología de punta, dando soluciones rápidas de manera eficiente; de igual forma operamos con los
-				mejores proveedores nacionales de internet, para ofrecer planes que se adaptan a cada necesidad.
+				Empresa venezolana desarrollada en el área de telecomunicaciones que se especializa en ofrecer servicios de transmisión satelital. Fundada en el año 2006, se diferenció como uno de los mejores proyectos respondiendo a las necesidades del mercado. <br><br>
+
+				Como estrategia de expansión, y respaldados en 18 años de trayectoria, <span class="text-indigo-700 font-medium">Up Link de Venezuela, C.A</span> avanza mediante la comercialización de Internet vía Fibra Óptica con tecnología GPON, desplegada especialmente para brindar una conexión estable y veloz. <br><br>
+
+				Desde hace 2 años, incursionó en el oriente del país, específicamente en la zona nor-oeste del estado Anzoátegui, contando con la más moderna tecnología para garantizar una excelente conexión, comunicación y acceso a Internet, consolidándose como la más efectiva alternativa.  <br><br>
+
+				Contamos con un valioso equipo de colaboradores, infraestructura y tecnología para brindar soluciones rápidas y eficientes; además de operar con los mejores proveedores nacionales de Internet, lo que nos permite ofrecer planes que superen las expectativas de nuestros abonados. <br><br>
 			</p>
 		</section>
 	</main>
