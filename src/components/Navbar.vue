@@ -1,6 +1,6 @@
 <template>
 	<main class="transition-colors duration-500 navbar-transparent"
-		:class="showColoredBackground ? 'navbar-gradient' : 'md:navbar-transparent'">
+		:class="showColoredBackground || $route.path != '/' ? 'navbar-gradient' : 'md:navbar-transparent'">
 		<section class="navbar-brand">
 			<img src="/logo.png" width="45" />
 			<h1 class="text-gray-50 text-xl font-semibold lg:text-3xl">UP LINK</h1>
@@ -91,7 +91,7 @@ const menus = [
 	},
 	{
 		name: 'Planes',
-		to: '/planes'
+		to: '/plans'
 	},
 	{
 		name: 'TV',
@@ -99,7 +99,7 @@ const menus = [
 	},
 	{
 		name: 'Contacto',
-		to: '/contacto'
+		to: '/contact'
 	},
 	{
 		name: 'Medidor',

@@ -1,12 +1,10 @@
 <template>
 	<main class="py-10">
 		<section class="mt-20" id="planes">
-			<h1 class="text-center pb-6 text-3xl md:text-4xl lg:text-5xl font-semibold text-[#1521f7]">Planes</h1>
-			<div class="md:flex justify-evenly gap-6">
-				<template v-for="(speaker, x) in speakers" :key="x">
-					<CardProfile :profile="speaker" />
-				</template>
-			</div>
+			<h1 class="text-center pb-6 text-3xl md:text-4xl lg:text-5xl font-semibold text-[#1521f7]">Speedtest</h1>
+
+			
+			
 		</section>
 	</main>
 </template>

@@ -7,7 +7,10 @@
                     <div class="w-1/6">
                         <select data-te-select-init>
                             <option value="1">V</option>
-                            <option value="2">J</option>
+                            <option value="2">E</option>
+                            <option value="3">J</option>
+                            <option value="4">G</option>
+                            <option value="5">P</option>
                         </select>
                     </div>
                     <input
