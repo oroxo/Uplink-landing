@@ -26,7 +26,7 @@
               <h1 class="mb-4 text-3xl font-semibold">
                 UP LINK DE VENEZUELA, C.A
               </h1>
-              <p class="lg:text-2xl text-gray-100 font-medium mt-4">¡¡A la Velocidad de la Luz!!</p>
+              <p class="lg:text-2xl text-gray-100 font-medium mt-4">¡A la Velocidad de la Luz!</p>
               <div class="text-gray-100 items-center gap-2">
                 <a href="https://instagram.com/uplink_oriente?utm_medium=copy_link" target="_blank">
                   <i class="fab fa-instagram text-2xl text-pink-600"></i>
