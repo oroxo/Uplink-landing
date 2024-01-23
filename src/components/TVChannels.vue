@@ -1,7 +1,7 @@
 <template>
     <div class="relative mt-20 py-10">
         <div class="text-center">
-            <h1>¡Mas de 50 canales!</h1>
+            <h1 class=" text-3xl text-[#1521f7] font-semibold">¡Proximamente!</h1>
         </div>
         <div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6">
             <div class="flex justify-center items-center">
