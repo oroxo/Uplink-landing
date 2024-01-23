@@ -1,7 +1,8 @@
 <template>
     <div class="relative" style="background-color: black;">
-        <div class="relative w-full overflow-hidden after:clear-both after:block after:content-[''] overlay123">
-            <video playsinline autoplay muted loop>
+        <!-- relative float-left -mr-[100%] hidden w-full !transform-none bg-cover bg-center bg-no-repeat opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none -->
+        <div class="relative w-full max-h-screen overflow-hidden !transform-none bg-cover bg-center bg-no-repeat after:clear-both after:block after:content-[''] overlay123">
+            <video playsinline autoplay muted loop class="w-full">
                 <source class="" src="https://oroxo.github.io/Uplink-landing/videos/tv.mp4" type="video/mp4" />
             </video>
             <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed">
