@@ -1,8 +1,8 @@
 <template>
 	<main class="py-10">
 		<div class="mt-20"></div>
-		<h1 class="text-center pb-6 text-3xl md:text-4xl lg:text-5xl font-semibold text-[#1521f7]">Quienes Somos</h1>
-		<p class="text-gray-600 text-center lg:px-24">UP LINK DE VENEZUELA, C.A</p>
+		<h1 class="text-center pb-6 text-3xl md:text-4xl lg:text-5xl font-semibold text-[#1521f7]">UP LINK DE VENEZUELA, C.A</h1>
+		<!-- <p class="text-gray-600 text-center lg:px-24">UP LINK DE VENEZUELA, C.A</p> -->
 		<section class="mt-10 md:flex md:gap-8 md:items-start xl:items-start">
 			<div class="md:mx-auto mb-5 md:w-4/12 lg:w-3/12">
 				<div class="-m-1 flex flex-wrap md:-m-2">
