@@ -1,0 +1,1 @@
+import{_ as o}from"./CommingSoon.7a154029.js";import{o as e,c as s,e as a}from"./vendor.697a2638.js";const t={id:"pagos",class:"bg--gray-100"},i={setup(c){return(r,n)=>(e(),s("section",t,[a(o)]))}};export{i as default};
