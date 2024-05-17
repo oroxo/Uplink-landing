@@ -5,7 +5,7 @@
   </template>
   
   <script setup>
-  import CS from '@/components/CommingSoon.vue'
+  import CS from '@/components/speedtest.vue'
   
   </script>
   

@@ -12,5 +12,27 @@ export default defineConfig({
   	alias: {
   		'@': resolve(__dirname, 'src')
   	}
-  }
+  },
+  server: {
+    proxy: {
+      "/api": {
+        target: "http://uplinkfibra.net/api/v1/",
+        changeOrigin: true,
+        secure: false,
+        rewrite: (p) => p.replace(/^\/api/, ""),
+      },
+    },
+    cors: false,
+  },
+  preview: {
+    proxy: {
+      "/api": {
+        target: "http://uplinkfibra.net/api/v1/",
+        changeOrigin: true,
+        secure: false,
+        rewrite: (p) => p.replace(/^\/api/, ""),
+      },
+    },
+    cors: false,
+  },
 })

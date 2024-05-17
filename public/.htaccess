@@ -1,0 +1,5 @@
+# File cache
+<FilesMatch "\.(css|js|html)$">
+Header set Cache-Control "max-age=3600"
+</FilesMatch>
+RewriteEngine on
