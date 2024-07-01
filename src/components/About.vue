@@ -15,7 +15,7 @@
 					<div class="flex w-full flex-wrap">
 						<div class="w-full p-1 md:p-2">
 							<img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center"
-								src="/fibra/fibra6.jpeg" />
+								src="/fibra/fibra9.jpg" />
 						</div>
 					</div>
 				</div>
