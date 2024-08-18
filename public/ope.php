@@ -16,57 +16,149 @@ class ope{
 	
 	function GetClientsDetails($cedula){
 		//echo $cedula;
+		$login_url = "http://190.121.239.53:6163/api/main/login";
+		$userDetails_url = "http://190.121.239.53:6163/api/adm/customers/?codclie='$cedula'";
+		$username = 'your_username';
+		$password = 'your_password';
+		$headers = array(
+			'x-api-key: B5D31933-C996-476C-B116-EF212A41479A',
+			'x-api-id: 1093',
+			'Authorization: Basic UE9SVEFMOjEyMzQ1',
+			'Content-Type: application/json',
+		);
 		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, "http://uplinkfibra.net/api/v1/GetClientsDetails");
+		curl_setopt($ch, CURLOPT_URL, $login_url);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-		curl_setopt($ch, CURLOPT_HEADER, FALSE);
-
+		curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+		curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+		curl_setopt($ch, CURLOPT_USERPWD, $username . ":" . $password);
 		curl_setopt($ch, CURLOPT_POST, TRUE);
-
+		curl_setopt($ch, CURLOPT_HEADER, true);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, "
-		{ \"token\": \"Nmw4dEt6R3VlSVVxUzNDSnVCbENDQT09\",
-		  \"cedula\": \"".$cedula."\"}
+		{\"terminal\": \"Pasarela\"}
 		");
+		// curl_setopt($ch, CURLOPT_POSTFIELDS, "
+		// { \"token\": \"Nmw4dEt6R3VlSVVxUzNDSnVCbENDQT09\",
+		//   \"cedula\": \"".$cedula."\"}
+		// ");
 
-		curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-		"Content-Type: text/plain"
-		));
+		// curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+		// "Content-Type: text/plain"
+		// ));
 
 		$response = curl_exec($ch);
+		$status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+		$headers = [];
+		$header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+		$headers_string = substr($response, 0, $header_size);
+		$headers_array = explode("\r\n", $headers_string);
+
+		$token = null;
+		foreach ($headers_array as $header) {
+			if (strpos($header, 'Pragma:') !== false) {
+				$token = trim(substr($header, strpos($header, ':') + 1));
+        		break;
+			}
+		}
+
 		curl_close($ch);
 		// vardump($response);
 		//header("Content-Type: application/json");
 		//header("Access-Control-Allow-Origin: https://uplinkdevenezuela.com.ve");
 		//echo $cedula;
+		$headers = array(
+			"x-api-key: B5D31933-C996-476C-B116-EF212A41479A",
+			"x-api-id: 1093",
+			"Pragma: $token",
+			"Content-Type: application/json",
+		);
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $userDetails_url);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+		curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+		$response = curl_exec($ch);
+		$status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+		curl_close($ch);
+		
+		// echo "Response Pragma: $token\n";
+		// echo "Response Status: $status\n";
+		// echo "Response Body: $response\n";
 		echo $response;
 		//vardump($response);
 		//return $response;
 	}
 	
-	function GetInvoices($idcliente){
+	function GetInvoices($cedula){
+		//echo $cedula;
+		$login_url = "http://190.121.239.53:6163/api/main/login";
+		$userInvoices_url = "http://190.121.239.53:6163/api/adm/invoices/?limit=4&codclie='$cedula'";
+		// $userInvoices_url = "http://190.121.239.53:6163/api/adm/invoices/?limit=4";
+		$username = 'your_username';
+		$password = 'your_password';
+		$headers = array(
+			'x-api-key: B5D31933-C996-476C-B116-EF212A41479A',
+			'x-api-id: 1093',
+			'Authorization: Basic UE9SVEFMOjEyMzQ1',
+			'Content-Type: application/json',
+		);
 		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, "http://uplinkfibra.net/api/v1/GetInvoices");
+		curl_setopt($ch, CURLOPT_URL, $login_url);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-		curl_setopt($ch, CURLOPT_HEADER, FALSE);
-
+		curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+		curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+		curl_setopt($ch, CURLOPT_USERPWD, $username . ":" . $password);
 		curl_setopt($ch, CURLOPT_POST, TRUE);
-
+		curl_setopt($ch, CURLOPT_HEADER, true);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, "
-		{ \"token\": \"Nmw4dEt6R3VlSVVxUzNDSnVCbENDQT09\",
-		  \"idcliente\": \"".$idcliente."\",
-		  \"limit\": \"4\"}
+		{\"terminal\": \"Pasarela\"}
 		");
+		// curl_setopt($ch, CURLOPT_POSTFIELDS, "
+		// { \"token\": \"Nmw4dEt6R3VlSVVxUzNDSnVCbENDQT09\",
+		//   \"cedula\": \"".$cedula."\"}
+		// ");
 
-		curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-		"Content-Type: text/plain"
-		));
+		// curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+		// "Content-Type: text/plain"
+		// ));
 
 		$response = curl_exec($ch);
+		$status_pragma = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+		$headers = [];
+		$header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+		$headers_string = substr($response, 0, $header_size);
+		$headers_array = explode("\r\n", $headers_string);
+
+		$token = null;
+		foreach ($headers_array as $header) {
+			if (strpos($header, 'Pragma:') !== false) {
+				$token = trim(substr($header, strpos($header, ':') + 1));
+        		break;
+			}
+		}
+
 		curl_close($ch);
 		// vardump($response);
 		//header("Content-Type: application/json");
 		//header("Access-Control-Allow-Origin: https://uplinkdevenezuela.com.ve");
 		//echo $cedula;
+		$headers = array(
+			"x-api-key: B5D31933-C996-476C-B116-EF212A41479A",
+			"x-api-id: 1093",
+			"Pragma: $token",
+			"Content-Type: application/json",
+		);
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $userInvoices_url);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+		curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+		$response = curl_exec($ch);
+		$status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+		curl_close($ch);
+		
+		// echo "Response Pragma: $token\n";
+		// echo "Response Pragma Status: $status_pragma\n";
+		// echo "Response Status: $status\n";
+		// echo "Response Body: $response\n";
 		echo $response;
 		//vardump($response);
 		//return $response;
@@ -176,5 +268,8 @@ else if($opcion=='GetInvoices'){
 else if($opcion=='GetBDV'){
 	$ope->requestBDV();
 }
+// echo "request\n";
+// echo $ope->GetInvoices('V148277423');
+// echo "finish\n";
 
 ?>
