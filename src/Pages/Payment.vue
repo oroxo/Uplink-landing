@@ -6,19 +6,19 @@
                 <div class="relative mb-4 flex w-100 flex-wrap items-stretch" v-if="status == 'show'">
                     <table style="color: whitesmoke">
                         <tr>
-                            <th colspan="4">{{ clientData.nombre + " / " + clientData.cedula }}</th>
+                            <th colspan="4">{{ clientData.descrip + " / " + clientData.codclie }}</th>
                         </tr>
                         <tr>
-                            <td colspan="4" style="text-align: center"> {{ clientData.servicios.length == 1 ?
+                            <!-- <td colspan="4" style="text-align: center"> {{ clientData.servicios.length == 1 ?
                                 clientData.servicios.length + " Servicio" : clientData.servicios.length + " Servicios"
                                 }}
-                            </td>
+                            </td> -->
                         </tr>
-                        <tr v-if="clientData.facturacion.facturas_nopagadas > 0">
+                        <tr v-if="clientData.facturacion && clientData.facturacion.facturas_nopagadas > 0">
                             <td colspan="2">Facturas no pagadas: </td>
                             <td colspan="2">{{ clientData.facturacion.facturas_nopagadas }}</td>
                         </tr>
-                        <tr v-if="clientData.facturacion.facturas_nopagadas > 0">
+                        <tr v-if="clientData.facturacion && clientData.facturacion.facturas_nopagadas > 0">
                             <td colspan="2">Total Adeudado:</td>
                             <td colspan="2">{{ clientData.facturacion.total_facturas + " Bs." }}</td>
                         </tr>
@@ -35,7 +35,7 @@
                             <td colspan="2"><button
                                     class="relative mb-4 z-[2] float-right flex items-center rounded-r bg-primary pt-[0.25rem] border border-solid border-neutral-600  px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-primary-700 hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary-800 active:shadow-lg"
                                     type="button" id="button-addon1" data-te-ripple-init data-te-ripple-color="light"
-                                    v-if="clientData.facturacion.total_facturas > 0" @click="clientPay()">
+                                    v-if="clientData.facturacion && clientData.facturacion.total_facturas > 0" @click="clientPay()">
                                     Pagar
                                 </button></td>
                         </tr>
@@ -44,13 +44,13 @@
                 <div class="relative mb-4 flex w-100 flex-wrap items-stretch" v-if="status == 'select_payment'">
                     <table style="color: whitesmoke">
                         <tr>
-                            <th colspan="4">{{ clientData.nombre + " / " + clientData.cedula }}</th>
+                            <th colspan="4">{{ clientData.descrip + " / " + clientData.codclie }}</th>
                         </tr>
-                        <tr v-if="clientData.facturacion.facturas_nopagadas > 0">
+                        <tr v-if="clientData.facturacion.facturas_nopagadas && clientData.facturacion.facturas_nopagadas > 0">
                             <td colspan="2">Total Adeudado:</td>
                             <td colspan="2">{{ clientData.facturacion.total_facturas + " Bs." }}</td>
                         </tr>
-                        <tr v-if="clientData.facturacion.facturas_nopagadas > 0">
+                        <tr v-if="clientData.facturacion.facturas_nopagadas && clientData.facturacion.facturas_nopagadas > 0">
                             <td colspan="2"><img :src="BDVLogo" alt="Banco De Venezuela"
                                     style="max-width: 140px; -webkit-filter: drop-shadow(2px 2px 2px #fff); filter: drop-shadow(0px 0px 1px #fff);">
                             </td>
@@ -61,7 +61,7 @@
                                     Pagar
                                 </button></td>
                         </tr>
-                        <tr v-if="clientData.facturacion.facturas_nopagadas > 0">
+                        <tr v-if="clientData.facturacion.facturas_nopagadas && clientData.facturacion.facturas_nopagadas > 0">
                             <td colspan="2"><img :src="BanescoLogo" alt="Banco De Venezuela"
                                     style="max-width: 140px; -webkit-filter: drop-shadow(2px 2px 2px #fff); filter: drop-shadow(0px 0px 1px #fff);">
                             </td>
@@ -73,8 +73,8 @@
                                 </button></td>
                         </tr>
 
-                        <tr v-if="clientData.facturacion.facturas_nopagadas > 0">
-                            <td colspan="2"><button
+                        <tr v-if="clientData.facturacion.facturas_nopagadas && clientData.facturacion.facturas_nopagadas > 0" class="w-auto flex justify-between items-center gap-4">
+                            <td colspan="4"><button
                                     class="relative mb-4 z-[2] flex items-center rounded-r bg-primary pt-[0.25rem] border border-solid border-neutral-600  px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-primary-700 hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary-800 active:shadow-lg"
                                     type="button" id="button-addon1" data-te-ripple-init data-te-ripple-color="light"
                                     @click="resetSearch()">
@@ -94,7 +94,7 @@
                         <thead class="bg-white border-b">
                             <tr>
                                 <th class="text-sm font-medium text-gray-900 px-6 py-4 text-center" colspan="4">{{
-                                    clientData.nombre + " / " + clientData.cedula }}</th>
+                                    clientData.descrip + " / " + clientData.codclie }}</th>
                             </tr>
                             <tr>
                                 <th class="text-sm font-medium text-gray-900 px-6 py-4 text-center"
@@ -121,11 +121,11 @@
                                     invoice.emitido }}</td>
                             </tr>
                         </tbody>
-                        <tr v-if="clientData.facturacion.facturas_nopagadas > 0">
+                        <tr v-if="clientData.facturacion.facturas_nopagadas && clientData.facturacion.facturas_nopagadas > 0">
                             <td class="text-center" colspan="2">Deuda Total:</td>
                             <td class="text-center" colspan="2">{{ clientData.facturacion.total_facturas }}</td>
                         </tr>
-                        <tr v-if="clientData.facturacion.facturas_nopagadas > 0">
+                        <tr v-if="clientData.facturacion.facturas_nopagadas && clientData.facturacion.facturas_nopagadas > 0">
                             <td class="content-center" colspan="2">
                                 <button
                                     class="relative mb-4 z-[2] flex items-center rounded-r bg-primary pt-[0.25rem] border border-solid border-neutral-600  px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-primary-700 hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary-800 active:shadow-lg"
@@ -213,8 +213,12 @@
                                 Telefono
                             </label>
                         </div>
-                        <button @click="BDV_URL()"
-                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Pagar</button>
+                        <div class="w-auto flex justify-between items-center gap-4">
+                            <button @click="clientPay()"
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Atras</button>
+                            <button @click="BDV_URL()"
+                            class="inset-y-0 right-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Pagar</button>
+                        </div>
                     </div>
 
 
@@ -364,13 +368,14 @@ export default {
             axios.post(
                 url, { opcion: "GetClientsDetails", cedula: this.kind + this.dni }, { timeout: 8000, signal: AbortSignal.timeout(8000) }
             ).then((response) => {
-                if (response.data.estado == "exito") {
-                    this.clientData = response.data.datos[0];
+                if (response.status == 200) {
+                    this.clientData = response.data[0];
+                    console.log(this.clientData)
                     this.status = "show"
-                    if (this.clientData.facturacion.facturas_nopagadas <= 0) {
-                        this.startTime = (new Date()).getTime();
-                        this.timerID = setTimeout(this.resetSearch, this.timerStep);
-                    }
+                    // if (this.clientData.facturacion.facturas_nopagadas <= 0) {
+                    //     this.startTime = (new Date()).getTime();
+                    //     this.timerID = setTimeout(this.resetSearch, this.timerStep);
+                    // }
                 } else if (response.data.estado == "error") {
                     this.errorMSG = response.data.mensaje
                 }
@@ -408,8 +413,8 @@ export default {
             axios.post(
                 url, this.PagoBDV, { headers: headers, timeout: 8000, signal: AbortSignal.timeout(8000) }
             ).then((response) => {
-                if(response.data.success == true){
-                    let newTab = window.open(response.data.urlPayment,'_blank');
+                if (response.data.success == true) {
+                    let newTab = window.open(response.data.urlPayment, '_blank');
                 }
             })
         },
